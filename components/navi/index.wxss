@@ -1,0 +1,14 @@
+/* components/navi/index.wxss */
+.navi-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 500rpx;
+  background-color: #F7F7F7
+}
+
+.navi-container image {
+  height: 80rpx;
+  width: 80rpx;
+}

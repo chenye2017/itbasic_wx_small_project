@@ -1,0 +1,55 @@
+<!--pages/render/render.wxml-->
+<view class="head">
+  <view class="head-left">
+    <image class="head-img" src="{{userinfo.avatar}}"></image>
+    <view class="head-font">{{userinfo.name}}</view>
+  </view>
+  <view class="head-right">
+    <view class="userinfo">{{userinfo.deptname}} - {{userinfo.postsname}}</view>
+    <view>上级：{{userinfo.superiorsname}}</view>
+  </view>
+</view>
+
+<view class="center">
+  <view class="center-item">
+      <view class="iconfont icon-notification item-img"></view>
+      <view class="item-font">公告</view>
+  </view>
+  <view class="center-item">
+      <view class="iconfont icon-YUAN item-img"></view>
+      <view class="item-font">报销</view>
+  </view>
+  <view class="center-item" bindtap="leaveClick">
+      <view class="iconfont icon-carryout item-img"></view>
+      <view class="item-font">请假</view>
+  </view>
+
+  <view class="center-item">
+      <view class="iconfont icon-unlike item-img"></view>
+      <view class="item-font">吐槽</view>
+  </view>
+ <view class="center-item">
+      <view class="iconfont icon-image item-img"></view>
+      <view class="item-font">听说</view>
+  </view>
+ <view class="center-item">
+      <view class="iconfont icon-gift item-img"></view>
+      <view class="item-font">积分兑换</view>
+  </view>
+
+  <view class="center-item">
+      <view class="iconfont icon-Dollar item-img"></view>
+      <view class="item-font">采购报销</view>
+  </view>
+  <view class="center-item">
+      <view class="iconfont icon-comment item-img"></view>
+      <view class="item-font">论坛</view>
+  </view>
+  <view class="center-item">
+      <view class="item-img"></view>
+      <view class="item-font"></view>
+  </view>
+
+</view>
+
+

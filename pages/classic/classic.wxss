@@ -1,0 +1,38 @@
+/* pages/classic.wxss */
+.chunk {
+  height: 100px;
+  width: 100px;
+}
+
+.classic-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20rpx;
+ 
+  width: 100%;
+}
+
+.classic-navi {
+  position: absolute;
+  bottom: 130rpx;
+}
+
+.classic-verse {
+  width: 100%;
+}
+
+.classic-movie {
+  width: 100%;
+}
+
+.classic-music {
+  width: 100%;
+}

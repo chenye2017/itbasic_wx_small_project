@@ -1,0 +1,64 @@
+{
+  "pages": [
+   
+    "pages/index/index",
+    "pages/render/render",
+    "pages/leave/leave",
+    
+    "pages/my/my",
+    "pages/info/info",
+    "pages/book/book",
+    "pages/classic/classic",
+    "pages/favor/favor",
+    "pages/logs/logs",
+    "pages/about/about",
+    "pages/user/user",
+    "pages/config/config"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "ITbasic Datatom",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/render/render",
+        "text": "首页",
+        "iconPath": "images/tabBar/classic.png",
+        "selectedIconPath": "images/tabBar/classic@highlight.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "通讯录",
+        "iconPath": "images/tabBar/book.png",
+        "selectedIconPath": "images/tabBar/book@highlight.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "登陆",
+        "iconPath": "images/tabBar/my.png",
+        "selectedIconPath": "images/tabBar/my@highlight.png"
+      }
+    ]
+  },
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "usingComponents": {
+    
+    "van-button": "miniprogram_npm/vant-weapp/button/index",
+    "van-datetime-picker": "miniprogram_npm/vant-weapp/datetime-picker/index",
+    "van-popup": "miniprogram_npm/vant-weapp/popup/index",
+    "van-tab": "miniprogram_npm/vant-weapp/tab/index",
+    "van-tabs": "miniprogram_npm/vant-weapp/tabs/index",
+    "van-picker": "miniprogram_npm/vant-weapp/picker/index",
+    "van-field": "miniprogram_npm/vant-weapp/field/index",
+    "van-cell-group": "miniprogram_npm/vant-weapp/cell-group/index",
+    "van-toast": "miniprogram_npm/vant-weapp/toast/index"
+    
+  }
+}

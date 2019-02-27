@@ -1,0 +1,107 @@
+/* pages/info/info.wxss */
+page {
+  background:  #f7f7f7;
+}
+
+.info-book-contain {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40rpx;
+}
+.info-book-img {
+  width: 220rpx;
+  height: 340rpx;
+}
+.info-book-title {
+  margin-top:20rpx;
+  color: black;
+  font-size: 40rpx;
+}
+.info-book-author {
+  font-size:30rpx;
+}
+.tag-contain {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30rpx;
+  padding-top: 40rpx;
+  padding-bottom: 40rpx;
+}
+
+.tag-title {
+  color: black;
+  font-size: 35rpx
+}
+.tag-nocontent {
+  font-size: 40rpx;
+  padding-top: 40rpx;
+}
+.content-contain {
+  margin-top: 30rpx;
+  padding-top: 40rpx;
+  padding-bottom: 40rpx;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+.content-title {
+  color: black;
+  font-size: 35rpx;
+  text-align: center;
+}
+.content-summary {
+  font-size: 35rpx;
+  padding-top:40rpx; 
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+
+.desc-contain {
+  background: white;
+  margin-top: 30rpx;
+  padding-top: 40rpx;
+  padding-bottom: 40rpx;
+}
+
+.desc-title {
+  text-align: center;
+  color: black;
+  font-size: 35rpx;
+}
+
+.desc-content {
+  padding-left: 30rpx;
+  font-size: 35rpx;
+  
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  margin-top:20rpx;
+}
+
+.list-title {
+  width: 150rpx;
+}
+
+.comment-contain {
+  display: flex;
+  flex-direction: row;
+  padding-top:25rpx;
+  padding-bottom: 25rpx;
+  padding-left: 30rpx;
+  align-items: center;
+}
+
+.comment-input {
+  width: 70%;
+  height: 70rpx;
+  border:1rpx solid black;
+  border-radius: 50rpx;
+  margin-right: 50rpx;
+}

@@ -1,0 +1,13 @@
+<!--components/calendar/index.wxml-->
+<view class="calendar-container">
+  <view class="no-container">
+    <view class="n">N</view>
+    <view class="o">O.</view>
+    <view class="index">{{_index}}</view>
+    
+  </view>
+  <view class="time-container">
+    <view class="month">{{month}}</view>
+    <view class="year">{{year}}</view>
+  </view>
+</view>

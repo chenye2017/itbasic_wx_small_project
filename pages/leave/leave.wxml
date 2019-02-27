@@ -1,0 +1,212 @@
+<!--pages/leave.wxml-->
+<van-tabs active="0" bind:change="onChange">
+  <van-tab title="我的请假">
+
+    <view class="leave-content">
+      <view class="item" wx:for="{{myLeave}}" wx:key="unique">
+        <view class="item-name">
+          <view class="head">申请人</view>
+          <view class="body">{{item.name}}</view>
+        </view>
+        <view class="item-name">
+          <view class='head'>申请时间</view>
+          <view class='body'>{{item.asktime}}</view>
+        </view>
+
+       
+        <view class="item-name">
+          <view class='head'>开始时间</view>
+          <view class='body'>{{item.starttime}}</view>
+        </view>
+        <view class="item-name">
+          <view class='head'>结束时间</view>
+          <view class='body'>{{item.endtime}}</view>
+        </view>
+        <view class="item-name">
+          <view class='head'>时长</view>
+          <view class='body'>{{item.timelength}} 小时</view>
+        </view>
+
+       <view class="item-name status">
+          <view class='head'>状态</view>
+          <view class='body'>{{item.status_cn}}</view>
+        </view>
+        <view class="item-name">
+          <view class='head'>审批人</view>
+          <view class='body'>{{item.askname}}</view>
+        </view>
+        <view class="item-name">
+          <view class='head'>是由</view>
+          <view class='body'>{{item.reason}}</view>
+        </view>
+       
+      </view>
+    </view>
+
+  </van-tab>
+  <van-tab title="添加请假">
+
+    <view class="add">
+      <view class="add-item">
+
+        <view class="add-item-name">所在地</view>
+        <view class="add-item-place">
+
+          <van-popup show="{{ placeShow }}" position="bottom">
+            <van-picker columns="{{array}}" bind:change="placeChange" custom-style="width:100%;" value-key="orgname" bind:cancel="placeCancel" bind:confirm="placeConfirm" show-toolbar="true" confirm-button-text="确认" cancel-button-text="取消" />
+          </van-popup>
+
+          <view class="add-item-content" bindtap='placeList'>
+            <view class="">{{askplace}}</view>
+            <view class="iconfont icon-right"></view>
+          </view>
+
+        </view>
+      </view>
+
+      <view class="add-item">
+        <view class="add-item-name">审批人</view>
+        <view class="">
+          {{askname}}
+        </view>
+      </view>
+
+      <view class="add-item">
+        <view class="add-item-name">类型</view>
+        <view class="add-item-place">
+
+          <view class="add-item-content" bindtap="typeList">
+            <view class="">{{asktype}}</view>
+            <view class="iconfont icon-right"></view>
+          </view>
+
+          <van-popup show="{{ typeShow }}" position="bottom" custom-style="width:100%">
+
+
+
+            <van-picker columns="{{ type }}" bind:change="typeChange" show-toolbar="true" confirm-button-text="确认" cancel-button-text="取消" bind:cancel="typeCancel" bind:confirm="typeConfirm" />
+
+          </van-popup>
+
+        </view>
+      </view>
+
+      <view class="add-item">
+        <view class="add-item-name">请假类型</view>
+        <view class="add-item-place">
+
+          <view class="add-item-content" bindtap="typetypeList">
+            <view class="">{{asktypetype}}</view>
+            <view class="iconfont icon-right"></view>
+          </view>
+
+          <van-popup show="{{ typetypeShow }}" position="bottom" custom-style="width:100%">
+            <van-picker columns="{{ typetype }}" show-toolbar="true" confirm-button-text="确认" cancel-button-text="取消" bind:change="typetypeChange" bind:cancel="typetypeCancel" bind:confirm="typetypeConfirm" />
+
+          </van-popup>
+
+        </view>
+      </view>
+
+
+      <view class="add-item">
+        <view class="add-item-name">开始时间</view>
+        <view class="add-item-place">
+
+          <view class="add-item-content" bindtap='startList'>
+            <view class="">{{start}}</view>
+            <view class="iconfont icon-right"></view>
+          </view>
+
+          <van-popup show="{{ startShow }}" position="bottom" custom-style="width:100%">
+            <van-datetime-picker type="datetime" show-toolbar="true" confirm-button-text="确定" cancel-button-text="取消" value="{{ currentDate }}" min-date="{{ minDate }}" max-date="{{ maxDate }}" bind:change="startChange" bind:cancel="startCancel" bind:confirm="startConfirm"
+            />
+
+
+          </van-popup>
+
+        </view>
+      </view>
+
+
+      <view class="add-item">
+        <view class="add-item-name">结束时间</view>
+        <view class="add-item-place">
+
+          <view class="add-item-content" bindtap='endList'>
+            <view class="">{{ end }}</view>
+            <view class="iconfont icon-right"></view>
+          </view>
+
+          <van-popup show="{{ endShow }}" position="bottom" custom-style="width:100%">
+            <van-datetime-picker type="datetime" show-toolbar="true" confirm-button-text="确定" cancel-button-text="取消" value="{{ currentDate }}" min-date="{{ minDate }}" max-date="{{ maxDate }}" bind:change="endChange" bind:cancel="endCancel" bind:confirm="endConfirm"
+            />
+
+
+          </van-popup>
+
+        </view>
+      </view>
+
+
+
+      <view class="add-item">
+        <view class="add-item-name">请假时长</view>
+        <view class="ask-length">
+          <van-field type="" placeholder="请输入用时长(单位小时)" bind:confirm="lengthConfirm" />
+        </view>
+      </view>
+
+
+      <view class="add-item">
+        <view class="add-item-name">请假原因</view>
+        <view class="ask-length">
+          <van-field type="" placeholder="请输入请假原因" bind:confirm="reasonConfirm" />
+        </view>
+      </view>
+
+      <view class="finish">
+        <van-button type="default" custom-class="submit" bindtap="leaveSubmit">提交</van-button>
+      </view>
+
+      <van-toast id="van-toast" />
+
+    </view>
+
+
+
+
+
+
+
+
+
+
+  </van-tab>
+
+  <van-tab title="待我审核">
+    <view class="leave-content">
+      <view class="item" wx:for="{{approvalLeave}}" wx:key="unique">
+        <view class="item-name">申请人 ：{{item.name}}</view>
+        <view class="item-name">申请时间 ：{{item.asktime}}</view>
+        <view class="item-name">事由 ：{{item.reason}}</view>
+        <view class="item-name">请假时间 ：{{item.starttime}} 到 {{item.endtime}}</view>
+        <view class="item-name item-status">状态 ：{{item.status_cn}}</view>
+        <view class="item-name">审批人 ：{{item.askname}}</view>
+      </view>
+    </view>
+  </van-tab>
+
+  <van-tab title="全部请假">
+    <view class="leave-content">
+      <view class="item" wx:for="{{allLeave}}" wx:key="unique">
+        <view class="item-name">申请人 ：{{item.name}}</view>
+        <view class="item-name">申请时间 ：{{item.asktime}}</view>
+        <view class="item-name">事由 ：{{item.reason}}</view>
+        <view class="item-name">请假时间 ：{{item.starttime}} 到 {{item.endtime}}</view>
+        <view class="item-name item-status">状态 ：{{item.status_cn}}</view>
+        <view class="item-name">审批人 ：{{item.askname}}</view>
+      </view>
+    </view>
+  </van-tab>
+</van-tabs>

@@ -1,0 +1,84 @@
+/* pages/leave.wxss */
+page {
+  font-size: 35rpx;
+  
+}
+
+.leave-content {
+  
+  padding-top: 30rpx;
+  
+}
+
+.item {
+  background: #fff;
+  padding:15rpx 25rpx 15rpx 25rpx;
+  margin-bottom: 20rpx;
+}
+.item-name {
+  display: flex;
+  flex-direction: row;
+}
+.status {
+  color: red;
+}
+
+.head {
+  width: 200rpx;
+}
+
+.item-status {
+  color: red;
+}
+
+.add {
+  background-color: #fff;
+  color: #333;
+  padding: 20rpx 40rpx 20rpx 40rpx;
+}
+
+.add-item {
+  display: flex;
+  flex-direction: row;
+  height: 70rpx;
+}
+
+.add-item-name {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.add-item-place {
+  width: 70%
+}
+
+.add-item-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+add-item-length {
+  display: flex;
+  flex-direction: row;
+}
+
+.ask-length {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.finish {
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center
+}
+
+.submit {
+  width: 200rpx;
+}
+

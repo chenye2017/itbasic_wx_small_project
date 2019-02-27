@@ -1,0 +1,79 @@
+/* pages/book/book.wxss */
+page {
+  background-color: #f7f7f7;
+}
+
+.header {
+  margin-top: 7rpx;
+  height: 100rpx;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search {
+  width: 85%;
+  height: 70rpx;
+  background-color: #f7f7f7;
+  border-radius: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-img {
+  width: 35rpx;
+  height: 35rpx;
+  margin-right: 20rpx;
+}
+.search-content {
+  font-size: 40rpx;
+}
+
+.content {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content-img {
+  height: 40rpx;
+  width: 130rpx;
+  margin-top: 30rpx;
+}
+
+.content-book {
+  margin-top:40rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+ 
+  
+}
+
+.book-list-item-img {
+  width: 300rpx;
+  height: 450rpx;
+}
+
+.book-list-item-info {
+  background-color: white;
+  padding-top:20rpx;
+  padding-bottom: 15rpx;
+  padding-left: 10rpx;
+  position: relative;
+  bottom: 120rpx;
+}
+
+.title-font {
+  color: black;
+  font-size:30rpx;
+}
+
+.fav-font {
+  margin-top: 10rpx;
+  position: relative;
+  left: 180rpx;
+}
+

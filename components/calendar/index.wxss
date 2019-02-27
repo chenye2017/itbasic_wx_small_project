@@ -1,0 +1,50 @@
+/* components/calendar/index.wxss */
+.calendar-container {
+  color: black;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.no-container {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  border-right: 1px solid black;
+  padding-right: 13rpx;
+}
+
+.n {
+  font-size:30rpx;
+  font-weight: lighter;
+}
+.o {
+  
+}
+
+.year {
+  font-weight: 550
+}
+
+.month {
+  font-weight: 550
+}
+
+.time-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 13rpx;
+
+}
+
+
+
+.index {
+  font-size: 50rpx;
+  line-height: 50rpx;
+  font-weight: 590;
+}
+
+.line {
+  border-left: 1px solid black;
+}

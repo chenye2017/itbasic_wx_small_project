@@ -1,0 +1,7 @@
+<!--components/classic/verse/index.wxml-->
+
+<view class="movies-container">
+  <image class="movies-main" src="{{classic_url}}"></image>
+  <image class="movies-type" src="{{type_url}}"></image>
+  <text class="movies-text" >{{classic_text}}</text>
+</view>

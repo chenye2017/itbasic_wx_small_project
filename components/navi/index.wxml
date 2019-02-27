@@ -1,0 +1,6 @@
+<!--components/navi/index.wxml-->
+<view class="navi-container">
+    <image src="{{end ? './images/triangle.dis@left.png':'./images/triangle@left.png'}}" bind:tap="onLeft"></image>
+    <text>{{content}}</text>
+    <image  src="{{start ? './images/triangle.dis@right.png':'./images/triangle@right.png'}}"  bind:tap="onRight"></image>
+</view>

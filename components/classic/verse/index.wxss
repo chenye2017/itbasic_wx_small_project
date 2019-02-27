@@ -1,0 +1,28 @@
+/* components/classic/verse/index.wxss */
+/* components/movies.wxss */
+.movies-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%
+}
+
+.movies-main{
+  width: 120%;
+}
+
+.movies-type{
+  position: relative;
+  bottom: 80rpx;
+  right: 300rpx;
+  width: 80rpx;
+  height: 200rpx;
+}
+
+.movies-text {
+  width: 80%;
+  font-size:40rpx;
+  font-weight: lighter;
+  line-height: 50rpx;
+  color: black;
+}

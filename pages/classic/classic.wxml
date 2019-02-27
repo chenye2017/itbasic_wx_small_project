@@ -1,0 +1,11 @@
+<!--pages/classic.wxml-->
+<view class="classic-container">
+  <view class="header-container">
+    <v-calendar number="{{classic.index}}"/>
+    <v-like bind:like="onLike" like="{{classic.like_status}}" count="{{classic.fav_nums}}"/>
+  </view>
+  <v-movies classic="classic-movies" wx:if="{{classic.type == 100}}" classic_url="{{classic.image}}" classic_text="{{classic.content}}"/>
+  <v-music class="classic-music" wx:elif="{{classic.type == 200}}" classic_url="{{classic.image}}" classic_text="{{classic.content}}" classic_music="{{classic.url}}" classic_music_title="{{classic.title}}"/>
+  <v-verse class="classic-verse" wx:else classic_url="{{classic.image}}" classic_text="{{classic.content}}"/>
+  <v-navi class="classic-navi" content="{{classic.title}}"  start="{{classic.start}}" end="{{classic.end}}" bind:left="onLeft" bind:right="onRight" />
+</view>

@@ -1,0 +1,22 @@
+<!--pages/book/book.wxml-->
+<view >
+  <view class="header">
+    <view class="search">
+      <image class="search-img" src="../../images/book/search.png"></image>
+      <view class="search-content">搜索书籍</view>
+    </view>
+  </view>
+  <view class="content">
+    <image class="content-img" src="../../images/book/jinxuan.png"></image>
+    <view class="content-book">
+      <view class="book-list-item-contain"  wx:for="{{bookList}}" wx:key="*this" bindtap="onClick" data-id="{{item.id}}">
+        <image class="book-list-item-img" src="{{item.image}}"></image>
+        <view class="book-list-item-info">
+          <view class="title-font">{{item.title}}</view>
+          <view>{{item.author}}</view>
+          <view class="fav-font">{{item.fav_nums}} 喜欢</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

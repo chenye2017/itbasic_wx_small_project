@@ -1,0 +1,50 @@
+<!--pages/my/my.wxml-->
+
+<view>
+  <view class="head">
+      <image class="head-img" src="../../images/my/my.png"></image>
+      <view class="head-content">
+        <view class="head-content-one">
+          <view class="about-view">
+            <image class="head-about" src="../../images/my/about.png" bindtap="redirectMe"></image>
+          </view>
+          <view class="about-view">{{count}}</view>
+        </view>
+        <view class="head-content-two">
+          <view class="two-view" bindtap="redirectMe">关于我们</view>
+          <view class="two-view">喜欢的书</view>
+        </view>
+      </view>
+  </view>
+
+  <view class="center">
+    <image class="center-like" src="../../images/my/like.png"></image>
+  </view>
+
+  <view wx:if="{{!isAuth}}" class="user-info-container">
+    <button class="user-button" hover-class='btn_hover' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" >
+      <image class="user-img" src="../../images/my/click.png" ></image>
+    </button>
+  </view>
+  <view wx:else class="user-info-container">
+  <button class="user-button" hover-class='btn_hover' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" >
+      <image class="userInfo-img" src="{{userInfo.avatarUrl}}" ></image>
+    </button>
+    <view class="userInfo-name">{{userInfo.nickName}}</view>
+  </view>
+
+  <view class="like">
+    <view class="like-item" wx:for="{{details}}">
+      <view class="like-head">
+        <view class="tag">{{item.type_cn}}</view>
+        <v-like count="{{item.fav_nums}}" like="1" likeDisable="true"></v-like>
+      </view>
+      <image class="like-center" src="{{item.image}}"></image>
+      <view class="like-bot">{{item.content}}</view>
+    </view>
+
+    
+
+  </view>
+
+</view>

@@ -1,0 +1,16 @@
+{
+  "name": "wx_itbasic",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lin-ui": "0.0.1-alpha.13",
+    "vant-weapp": "^0.5.5"
+  },
+  "devDependencies": {},
+  "description": ""
+}
